@@ -1,0 +1,103 @@
+/* ********************* similar css styles *************** */
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+
+
+/* ***************** Navbar  section ***************** */
+.Navbar{
+    background-color: white; 
+}
+
+.mainNavbar{
+    font-family: sans-serif;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-weight: 600;
+    gap: 10px;
+   
+    
+}
+.item{
+    padding: 10px;
+}
+
+.b{
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    margin: 0px 5px;
+    padding: 10px;
+}
+
+
+.nav-item2{
+    font-size: larger;
+    flex-grow: 2;
+
+}
+.nav-item2:hover{
+    font-size: larger;
+    flex-grow: 2;
+    
+}
+
+.nav-item3{
+    display: flex;
+    gap: 10px;
+    flex-grow: 5;
+    justify-content: space-between;
+}
+
+.nav-Btn{
+    
+    border-bottom:none;   
+}
+
+.second-Navbar{
+    
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 600;
+
+}
+
+.second-Navbar-item1{
+    font-size: 2rem;
+   
+}
+.second-Navbar-item2{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ********************* heading section ***************** */
+
+
+
+.heading .big-card .card-body{
+    width: 30% !important;
+}
+
+.heading .card-img-right{
+    width: 70% !important;
+}
+
+.heading .heading-title{
+    margin: 0px;
+    padding: 0px !important;
+}
+.heading .heading-para{
+    
+    padding: 0px !important;
+    font-size: x-small;
+}
