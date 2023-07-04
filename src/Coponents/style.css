@@ -101,3 +101,21 @@
     padding: 0px !important;
     font-size: x-small;
 }
+/* this is  a card section */
+
+.card{
+    margin-top: 10px;
+    border: none;
+}
+
+.card h5{
+    font-size: 10px;
+}
+.card p{
+    font-size: 10px;
+}
+
+.card-img{
+    height: 200px !important;
+
+}
