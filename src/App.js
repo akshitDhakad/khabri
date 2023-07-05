@@ -2,16 +2,19 @@ import './App.css';
 import Topheadlines from './Coponents/Topheadlines';
 import Navbar from './Coponents/Navbar';
 import Main from  './Coponents/Main'
-import Footer from './Coponents/Footer';
+import { BrowserRouter } from 'react-router-dom';
+
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <Navbar/>
       <Topheadlines/>
       <Main/>
-      <Footer/>
+      
     </div>
+    </BrowserRouter>
   );
 }
 

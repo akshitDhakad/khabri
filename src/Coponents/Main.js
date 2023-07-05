@@ -1,36 +1,60 @@
 import React, { useEffect, useState } from 'react';
 import "./style.css";
 import Card from './Card';
+import { useLocation } from 'react-router-dom';
 
 function Main() {
+  const location = useLocation();
   const [data, setData] = useState(null);
-  const [top,setTop] = useState("everything");
-  const [country,setCountry] = useState("in")
+  const [top, setTop] = useState("top-headlines");
+  const [country, setCountry] = useState("in");
+  const [category, setCategory] = useState("business");
+  const [sortBy, setSortBy] = useState("publishedAt");
 
   useEffect(() => {
-    async function fetchData() {
-      
-      try {
-        const response = await fetch(`https://newsapi.org/v2/${top}?country=${country}&apiKey=3d991f8190074398a14570847ee36dc3`);
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    const queryParams = new URLSearchParams(location.search);
+    const filterValue = queryParams.get('filter');
+    const filterCountry = queryParams.get('country');
+    
+
+    if (filterCountry) {
+      setCountry(filterCountry);
+    }else if(filterValue){
+      setCategory(filterValue)
     }
 
     fetchData();
-  }, [top,country]);
+  }, [location]);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`https://newsapi.org/v2/${top}?country=${country}&category=${category}&from=2023-06-05&sortBy=${sortBy}&apiKey=3d991f8190074398a14570847ee36dc3`);
+      const result = await response.json();
+      setData(result);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [top, country, category, sortBy]);
 
   return (
     <div className='container row'>
-      {data && data.articles && data.articles.map((i, index) =>
-        <Card key={index} title={i.title} imgURl={i.urlToImage} des={i.description} readmore={i.url} />
-      )}
+      {data &&
+        data.articles &&
+        data.articles.map((i, index) => (
+          <Card
+            key={index}
+            title={i.title}
+            imgURl={i.urlToImage}
+            des={i.description}
+            readmore={i.url}
+          />
+        ))}
     </div>
   );
 }
 
-// https://newsapi.org/v2/everything?apiKey=3d991f8190074398a14570847ee36dc3
-// api key =3d991f8190074398a14570847ee36dc3
 export default Main;

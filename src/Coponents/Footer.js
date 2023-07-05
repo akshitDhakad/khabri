@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Footer() {
+function Footer(props) {
   return (
-    <div>Footer</div>
+    <div className='footer'><marquee>{props.data}</marquee></div>
   )
 }
 
