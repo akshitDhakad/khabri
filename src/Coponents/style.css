@@ -135,3 +135,70 @@ a{
     height: 200px !important;
 
 }
+
+
+/* ***************************8 sign-up page******************************** */
+/* * {
+    box-sizing: border-box;
+  } */
+  
+  .signup {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .signup .register-form{
+    max-width: 300px;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #4caf50 !important;
+    margin: auto;
+  }
+  
+  .signup h6 {
+    text-align: center !important;
+    margin-bottom: 20px;
+    color: red;
+    font-weight: 700;
+  }
+  
+  .signup h6 {
+    margin-bottom: 30px;
+   
+  }
+  
+  .signup input[type="text"],
+  .signup input[type="password"],
+  .signup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .signup button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .signup button:hover {
+    background-color: #45a049;
+  }
+  
