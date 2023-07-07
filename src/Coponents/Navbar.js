@@ -13,7 +13,7 @@ function Navbar() {
             <div className='item nav-item1'><span className='b'>B</span><span className='b'>B</span><span className='b'>C</span></div>
             <Link className='item nav-ite' to={"/signup"}>Signup</Link>
             <div className='item nav-item3' >
-              <Link to={"/sig"} className='nav-Btn'>Home</Link>
+              <Link to={"/"} className='nav-Btn'>Home</Link>
               <button onClick={()=>setSearchParams({filter:"general"})} className='nav-Btn'>General</button>
               <button onClick={()=>setSearchParams({filter:"sports"})} className='nav-Btn'>Sport</button>
               <button onClick={()=>setSearchParams({filter:"entertainment"})} className='nav-Btn'>Reel</button>

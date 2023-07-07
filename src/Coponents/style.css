@@ -27,6 +27,7 @@
     right: 0;
     z-index: 999; /* Optional: Specify a higher z-index value if needed */
     background-color: #fff;
+    flex-shrink: 2;
 }
 
 .item{
@@ -56,19 +57,24 @@
 .nav-item3{
     display: flex;
     gap: 10px;
-    flex-grow: 5;
+    flex-grow: 7;
     justify-content: space-between;
+    
+    
+    
 }
 
 a{
     text-decoration: none !important;
+    
     color: black;
 }
 
 .mainNavbar .nav-Btn{
     background-color: #fff;
     border: none;
-    font-weight: 400; 
+    font-weight: 400;
+    
 }
 .second-Navbar .nav-Btn{
     background-color: brown;
@@ -149,9 +155,12 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    width: 100vw;
+    height:100vh;
     background-color: #f2f2f2;
-  }
+    background-image: url("https://source.unsplash.com/1500x1200/?newsletter");
+    object-fit: cover;
+}
   
   .signup .register-form{
     max-width: 300px;
@@ -175,6 +184,9 @@ a{
   
   .signup h6 {
     margin-bottom: 30px;
+
+
+
    
   }
   
