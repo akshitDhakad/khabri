@@ -30,7 +30,7 @@ function Signup() {
 
   return (
     <div className='signup'>
-        <form onSubmit={handleClick} class="register-form">
+        <form onSubmit={handleClick} className="register-form">
             <h6>Subscribe Us</h6>
             <div>
                 <input value={name} onChange={(e)=>setName(e.target.value)} type="text" id="fullname" placeholder="Full Name" required />

@@ -53,8 +53,8 @@ function Topheadlines() {
 
   if (data.length === 0) {
     return (
-      <div class="spinner-border text-black" role="status">
-        <span class="visually-hidden">Loading...</span>
+      <div className="spinner-border text-black" role="status">
+        <span className="visually-hidden">Loading...</span>
       </div>
     ); // Show a loading message while fetching data
   }
@@ -149,8 +149,8 @@ export default Topheadlines;
 
 //   if (data.length === 0) {
 //     return (
-//       <div class="spinner-border text-black" role="status">
-//         <span class="visually-hidden">Loading...</span>
+//       <div className="spinner-border text-black" role="status">
+//         <span className="visually-hidden">Loading...</span>
 //       </div>
 //     ); // Show a loading message while fetching data
 //   }
@@ -225,8 +225,8 @@ export default Topheadlines;
 //   }, [currentIndex, data.length]);
 
 //   if (data.length === 0) {
-//     return <div class="spinner-border  text-black" role="status">
-//     <span class="visually-hidden">Loading...</span>
+//     return <div className="spinner-border  text-black" role="status">
+//     <span className="visually-hidden">Loading...</span>
 //   </div>; // Show a loading message while fetching data
 //   }
 

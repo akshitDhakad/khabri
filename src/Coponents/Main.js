@@ -54,8 +54,8 @@ function Main() {
   }, [category,country,filter]);
 
   if (loading) {
-    return <div class="spinner-border  text-black" role="status">
-    <span class="visually-hidden">Loading...</span>
+    return <div className="spinner-border  text-black" role="status">
+    <span className="visually-hidden">Loading...</span>
   </div>}
 
   return (
