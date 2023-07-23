@@ -14,6 +14,9 @@ root.render(
       <Route path="/" element={<App />} />
     </Routes>
     <Routes>
+      <Route path="/:category" element={<App />} />
+    </Routes> 
+    <Routes>
       <Route path="/signup" element={<Signup />} />
     </Routes>
   </BrowserRouter>
