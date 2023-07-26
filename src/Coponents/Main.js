@@ -4,6 +4,7 @@ import Card from './Card';
 import { useParams } from 'react-router-dom';
 
 function Main() {
+  const apiKey = process.env.REACT_APP_API_KEY
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const { category } = useParams();
@@ -29,16 +30,16 @@ function Main() {
         let apiURL;
         if (category === "top-headlines") {
           if(country){
-            apiURL = `https://newsapi.org/v2/top-headlines?country=${country}&language=en&apiKey=3d991f8190074398a14570847ee36dc3`;
+            apiURL = `https://newsapi.org/v2/top-headlines?country=${country}&language=en&apiKey=${apiKey}`;
 
           }
           else{
-            apiURL = `https://newsapi.org/v2/top-headlines?category=${filter}&language=en&apiKey=3d991f8190074398a14570847ee36dc3`;
+            apiURL = `https://newsapi.org/v2/top-headlines?category=${filter}&language=en&apiKey=${apiKey}`;
 
           }
           
         } else {
-          apiURL = "https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=3d991f8190074398a14570847ee36dc3";
+          apiURL = `https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=${apiKey}`;
         }
 
         const response = await fetch(apiURL);

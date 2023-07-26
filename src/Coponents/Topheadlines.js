@@ -6,9 +6,12 @@ function Topheadlines() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    const apiKey = process.env.REACT_APP_API_KEY
+
+   
     async function fetchData() {
       try {
-        const response = await fetch("https://newsapi.org/v2/top-headlines/sources?language=en&apiKey=3d991f8190074398a14570847ee36dc3");
+        const response = await fetch(`https://newsapi.org/v2/top-headlines/sources?language=en&apiKey=${apiKey}`);
         const data = await response.json();
         setData(data.sources);
       } catch (error) {
@@ -83,6 +86,7 @@ function Topheadlines() {
 }
 
 export default Topheadlines;
+
 
 //  old code ****************************************************************************************
 // import React, { useEffect, useState } from 'react';
