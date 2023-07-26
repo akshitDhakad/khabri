@@ -48,7 +48,7 @@ function Navbar() {
         <div className='container second-Navbar'>
           <div className='second-Navbar-item1'>NEWS</div>
           <div className='second-Navbar-item2'>
-            <button  className='nav-Btn'><Link to={"/top-headlines?category="}>Warn in Ukraine</Link></button>
+            <button  className='nav-Btn'><Link to={"..."}>Ukarine war</Link></button>
             <button  className='nav-Btn'><Link to={"/top-headlines?category=health"}>Health</Link></button>
             <button  className='nav-Btn'><Link to={"/top-headlines?category=climate"}>Climate</Link></button>
             <button  className='nav-Btn'><Link to={"/top-headlines?category=entertainment"}>Video</Link></button>
